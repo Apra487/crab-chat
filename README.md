@@ -13,8 +13,8 @@ The front-end has been developed as a desktop prototype, and it is meant to be v
 
 ## Screenshots
 <img width="1792" alt="Screenshot 2021-12-22 at 10 05 17 PM" src="https://user-images.githubusercontent.com/54775196/147125341-e51912b8-fd36-4f9a-abf4-1a779ab386f5.png">
-<img width="1792" alt="Screenshot 2021-12-22 at 10 10 29 PM" src="https://user-images.githubusercontent.com/54775196/147126063-2880ea13-6535-4163-878e-ebde9af531cc.png">
 
+<img width="1792" alt="Screenshot 2021-12-23 at 1 20 27 AM" src="https://user-images.githubusercontent.com/54775196/147147666-ef5e6d33-e483-47fa-b5da-b9c44f0e241c.png">
 
 ## Development Setup
 - Clone the repository and run `npm install` to install the necessary dependencies.
@@ -29,6 +29,10 @@ The front-end has been developed as a desktop prototype, and it is meant to be v
 - ✔️- message has been send and present in the server
 - ✔️✔️- messagae has been recieved by the user
 - ✅ -message has been read by the user).
+
+## Live Demo
+
+Fell free to check it out [here](https://p2p-chat-app-8d25b.web.app/)
 
 
 
