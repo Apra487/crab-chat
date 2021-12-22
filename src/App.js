@@ -111,7 +111,6 @@ function App() {
 					state: 'away',
 					last_changed: firebase.database.ServerValue.TIMESTAMP,
 				};
-				// realtimeDb.ref('/users/' + user.uid)
 				realtimeDb
 					.ref()
 					.child('/users/' + user.uid)
@@ -131,7 +130,7 @@ function App() {
 
 	usePageVisibility(handleVisibilityChange);
 
-	const selectUser = (otherUser) => {
+	const selectUser = async (otherUser) => {
 
 		observerArray.forEach(observer => observer());
 		// setChat(user);
@@ -170,7 +169,12 @@ function App() {
 			}
 		);
 		setOberserverarray([...observerArray, observer])
-		// observer();
+		const docSnap = await db.collection('lastmsg').doc(id).get();
+		if (docSnap.data() && docSnap.data().from !== user1) {
+			// update last message doc, set unread to false
+				db.collection('lastmsg').doc(id).update({unread: false}).catch((e) => console.log(e));
+		  }
+
 
 	};
 
@@ -182,12 +186,10 @@ function App() {
 				.collection('users')
 				.doc(user.uid)
 				.collection('userChatRooms');
-				// let msgs = [];
 			const observer = usersRef.onSnapshot(
 				(querySnapshot) => {
 					
 					querySnapshot.forEach((doc) => {
-						// msgs.push(doc.id);
 						console.log('here', doc);
 						const chatRef = db.collection('messages').doc(doc.id).collection('chat');
 						const query = db.collection('messages').doc(doc.id).collection('chat').orderBy('createdAt');
@@ -244,6 +246,15 @@ function App() {
 			.set({
 				recieverId: user2,
 			});
+		db.collection('lastmsg')
+			.doc(id)
+			.set({
+				text,
+				from: user1,
+				to: user2,
+				createdAt: firebase.firestore.FieldValue.serverTimestamp(),
+				unread: true
+			});
 		setText('');
 	};
 
@@ -252,15 +263,15 @@ function App() {
 			{user && (
 				<div className='allChat'>
 					{allUsers.length ? (
-						allUsers.map((user) => (
+						allUsers.map((user2) => (
 							<User
-								key={user.uid}
-								name={user.name}
-								profilePic={user.profilePic}
+								key={user2.uid}
+								name={user2.name}
+								profilePic={user2.profilePic}
 								selectUser={selectUser}
-								user={user}
-								status={user.state}
-								onclick={() => selectUser(user)}
+								user2={user2}
+								user1={user}
+								onclick={() => selectUser(user2)}
 							/>
 						))
 					) : (
