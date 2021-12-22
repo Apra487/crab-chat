@@ -24,10 +24,10 @@ The front-end has been developed as a desktop prototype, and it is meant to be v
 
 ## Features
 - Google auth for sign in.
-- Realtime User Presence System. (🟢 - Online, 🟡 - Away/Idle, 🔴 - Offline)
+- Realtime User Presence System. (🟢 - Online, 🟡 - Away/Idle)
 - Realtime message delivery status. 
-- ✔️ - message has been send and present in the server
-- ✔️✔️ - messagae has been recieved by the user
+- ✔️  message has been send and present in the server
+- ✔️✔️ messagae has been recieved by the user
 - ✅ message has been read by the user).
 
 
