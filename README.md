@@ -1,6 +1,6 @@
 # Crab Chat
 
-This repository contains the code of Crab Chat - A realtime peer to peer fullstack chat app with real time presence detection sytem.
+This repository contains the code of Crab Chat - A realtime peer to peer fullstack chat app with real time presence detection system.
 
 ## Note
 
@@ -21,6 +21,14 @@ The front-end has been developed as a desktop prototype, and it is meant to be v
 - Get the firebase credtials from the firebase console.
 - Create .env file at root level of project and add `REACT_APP_API_KEY`, `REACT_APP_AUTH_DOMAIN`, `REACT_APP_DATABASE_URL`, `REACT_APP_PROJECT_ID`, `REACT_APP_STORAGE_BUCKET`, `REACT_APP_MESSAGING_SENDER_ID`, `REACT_APP_APP_ID`
 - Run `npm start` to start the development environment.
+
+## Features
+- Google auth for sign in.
+- Realtime User Presence System. (🟢 - Online, 🟡 - Away/Idle, 🔴 - Offline)
+- Realtime message delivery status. 
+- ✔️ - message has been send and present in the server
+- ✔️✔️ - messagae has been recieved by the user
+- ✅ message has been read by the user).
 
 
 
