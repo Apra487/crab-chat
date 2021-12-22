@@ -1,0 +1,15 @@
+.activeUser {
+    min-height: 40px;
+    display: flex;
+    padding: 10px;
+    align-self: center;
+    border-bottom: 0.2rem solid purple;
+    cursor: pointer;
+}
+
+.activeUser span{
+    padding: 0;
+    margin: 10px;
+    display: inline;
+    align-self: center;
+}

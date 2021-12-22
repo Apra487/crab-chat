@@ -1,0 +1,11 @@
+.log-out {
+    padding: 10px;
+    background-color: orangered;
+    color: white;
+    border: 0;
+    margin: 0;
+    font-weight: 800;
+    cursor: pointer;
+    border-radius: 6px;
+    max-width: 200px;
+}

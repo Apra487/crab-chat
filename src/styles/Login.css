@@ -1,0 +1,81 @@
+.login {
+	display: grid;
+	place-items: center;
+	height: 100vh;
+	width: 100%;
+	justify-content: center;
+	align-content: center;
+}
+
+.header-text {
+	color: white;
+	text-align: center;
+	padding: 0.5rem 0.5rem 0 0.5rem;
+}
+
+.login__logo {
+	height: 300px;
+	width: 300px;
+	margin: 100px;
+	border-radius: 50%;
+	border: 0.2rem solid #fff;
+}
+
+.login > button {
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	cursor: pointer;
+	width: 300px;
+	font-weight: 800;
+}
+
+.avatar {
+	min-width: 95.5%;
+	min-height: 100%;
+	position: relative;
+	filter: drop-shadow(0 0 0.1rem rgba(0, 0, 0, 0.7));
+}
+
+#customBtn {
+	display: flex;
+	justify-content: space-evenly;
+	background: white;
+	color: #444;
+	width: 250px;
+	border-radius: 5px;
+	border: thin solid #888;
+	box-shadow: 1px 1px 1px grey;
+	white-space: nowrap;
+	padding: 8px;
+}
+
+#customBtn img {
+	width: 25px;
+	height: 25px;
+}
+#customBtn:hover {
+	cursor: pointer;
+}
+span.label {
+	font-family: serif;
+	font-weight: normal;
+}
+span.icon {
+	/* background: url('/identity/sign-in/g-normal.png') transparent 5px 50% no-repeat; */
+	display: inline-block;
+	vertical-align: middle;
+	width: 12px;
+	height: 12px;
+}
+span.buttonText {
+	display: inline-block;
+	font-size: 18px;
+	font-weight: bold;
+	font-family: 'Roboto', sans-serif;
+	align-self: center;
+}
