@@ -1,157 +1,200 @@
 * {
-  border: 0;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  overflow-y: hidden;
+	border: 0;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	overflow-y: hidden;
 }
 
-*:focus{
-  outline: none;
+*:focus {
+	outline: none;
 }
-
 
 body {
-  background: linear-gradient(170deg, indigo, purple);
+	background: linear-gradient(170deg, indigo, purple);
 }
 
 .app {
-  display: flex;
-  justify-content: center;
+	display: flex;
+	justify-content: center;
 }
 
 .app .active h1 {
-  color: white;
+	color: white;
 }
 
 .welcomeSection {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  min-width: 50vw;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(170deg, rgb(69, 2, 117), rgb(78, 8, 78));
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	min-width: 50vw;
+	justify-content: center;
+	align-items: center;
+	background: linear-gradient(170deg, rgb(69, 2, 117), rgb(78, 8, 78));
+}
+
+.welcomeSection h1 {
+  color: white;
+  margin-bottom: 30px;
 }
 
 .chatSection header {
-  background-color: rgb(50, 7, 82);
-  height: 10vh;
-  min-height: 50px;
-  color: white;
-  position: fixed;
-  width: 100%;
-  max-width: 50vw;
-  top: 0;
+	background-color: rgb(50, 7, 82);
+	height: 10vh;
+	min-height: 50px;
+	color: white;
+	position: fixed;
+	width: 100%;
+	max-width: 50vw;
+	top: 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	z-index: 99;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+.chatSection {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	min-height: 100vh;
+	background: linear-gradient(170deg, rgb(69, 2, 117), rgb(78, 8, 78));
+	text-align: center;
+	min-width: 50vw;
+}
+
+.chatHeaderDiv {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  z-index: 99;
-  padding: 10px;
-  box-sizing: border-box;
 }
 
-.chatSection  {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 100vh;
-  background: linear-gradient(170deg, rgb(69, 2, 117), rgb(78, 8, 78));
-  text-align: center;
-  min-width: 50vw;
+.chatHeaderDiv img {
+  align-Self: center;
 }
 
 
-ul, li {
-  text-align: left;
-  list-style: none;
+ul,
+li {
+	text-align: left;
+	list-style: none;
 }
 
-p {
-  max-width: 500px;
-  margin-bottom: 12px;
-  line-height: 24px;
-  padding: 10px 20px;
-  border-radius: 25px;
-  position: relative;
-  color: white;
-  text-align: center;
-}
 .userInfo p {
-  max-width: 500px;
-  margin-bottom: 0;
-  line-height: 24px;
-  padding: 0;
-  /* border-radius: 25px; */
-  position: relative;
-  color: white;
-  text-align: center;
+	max-width: 500px;
+	margin-bottom: 0;
+	line-height: 24px;
+	padding: 0;
+	/* border-radius: 25px; */
+	position: relative;
+	color: white;
+	text-align: center;
 }
 
 .userInfo {
-  display: 'flex';
-  flex-direction: 'column';
-  justify-content: 'center';
-  padding: 10px 20px;
-  border-radius: 25px;
-  margin-bottom: 12px;
-  
+	display: 'flex';
+	flex-direction: 'column';
+	justify-content: 'center';
+	padding: 10px 20px;
+	border-radius: 25px;
+	margin-bottom: 12px;
+}
+.subUserInfo {
+	color: #e5e5e5;
+  margin-top: 10px;
 }
 
 .message {
+	display: flex;
+	align-items: center;
+}
+
+.message small{
+	color: grey;
+}
+
+.message_bubble {
   display: flex;
+  flex-direction: column;
   align-items: center;
+  margin: 3px;
+
 }
 
 
 .sent {
-  flex-direction: row-reverse;
+	flex-direction: row-reverse;
 }
 
 .sent p {
-  color: rgb(26, 26, 26);
-  background: #05ee66;
-  align-self: flex-end;
+	color: rgb(26, 26, 26);
+	background: #05ee66;
+	align-self: flex-end;
 }
 .received p {
-  background: #e5e5ea;
-  color: black;
+	background: #e5e5ea;
+	color: black;
 }
 
 .active-header {
-  background-color: rgb(58, 10, 95);
-  height: 10vh;
-  min-height: 50px;
-  z-index: 99;
-  padding: 10px;
-  box-sizing: border-box;
+	background-color: rgb(58, 10, 95);
+	height: 10vh;
+	min-height: 50px;
+	z-index: 99;
+	padding: 10px;
+	box-sizing: border-box;
 }
 
 img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  margin: 2px 5px;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	margin: 2px 5px;
 }
 
 .active {
-  height: 100vh;
-  width: 25vw;
+	height: 100vh;
+	width: 25vw;
 }
 
-.allChat {
-  height: 100vh;
-  width: 30vw;
+.allUserSection {
+	height: 100vh;
+	width: 30vw;
+	overflow-y: scroll;
+}
+
+.activeUserList {
+  min-height: 90vh;
+  overflow-y: scroll;
 }
 
 .unread {
-  margin-left: 10px;
-  background: greenyellow;
+	margin-left: 10px;
+	background: greenyellow;
+	padding: 4px 4px 4px;
+	border-radius: 10px;
+	align-self: center;
+	margin-bottom: 20px;
+	text-align: inherit;
+	min-height: 20px;
+}
 
-  padding: 4px 4px 4px;
-  border-radius: 10px;
-  align-self: center;
-  margin-bottom: 20px;
-  text-align: inherit;
-  min-height: 20px;
+.chatHeaderInfo {
+	display: flex;
+	flex-direction: column;
+	min-width: 150px;
+}
+
+.chatHeaderInfo h3 {
+	text-align: left;
+	padding-top: 0;
+	margin-bottom: 6px;
+  padding-left: 3px;
+}
+
+
+.chatHeaderInfo p {
+	display: inline;
+	padding: 3px;
+  text-align: initial;
 }

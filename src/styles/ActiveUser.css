@@ -1,15 +1,46 @@
-.activeUser {
+.user_wrapper {
     min-height: 40px;
     display: flex;
     padding: 10px;
     align-self: center;
-    border-bottom: 0.2rem solid purple;
+    border-bottom: 0.13rem dotted black;
     cursor: pointer;
 }
 
-.activeUser span{
+.user_wrapper h4 {
+    color: white;
+}
+
+.user_wrapper span{
     padding: 0;
     margin: 10px;
     display: inline;
     align-self: center;
 }
+
+.selectedUser {
+    background: #320752;
+}
+
+.active_user_wrapper {
+    min-height: 80px;
+    display: flex;
+    padding: 10px;
+    align-self: center;
+    border-bottom: 0.13rem dotted black;
+}
+
+.active_user_wrapper p {
+  max-width: 500px;
+  margin-bottom: 12px;
+  line-height: 24px;
+  padding: 10px 20px;
+  border-radius: 25px;
+  position: relative;
+  color: white;
+  text-align: center;
+}
+
+.active_user_wrapper span {
+    padding-left: 10px;
+  }

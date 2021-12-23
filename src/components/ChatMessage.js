@@ -37,10 +37,10 @@ export default function ChatMessage(props) {
     // console.log(symbol);
     return (<>
       <div className={`message ${messageClass}`} ref={scrollView}>
-        <div style={{ display: 'flex', flexDirection: 'column', allignItem: 'center', margin: '3px' }}>
+        <div className="message_bubble">
           <p>{text} {symbol}</p>
           {/* <br /> */}
-          <small style={{color: 'grey'}}>
+          <small>
             {props.message.createdAt ? <Moment fromNow>{props.message.createdAt.toDate()}</Moment> : (<></>)}
           </small>
         </div>
