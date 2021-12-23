@@ -198,3 +198,43 @@ img {
 	padding: 3px;
   text-align: initial;
 }
+
+form button {
+  overflow-x: hidden;
+}
+
+.main::-webkit-scrollbar {
+  width: 0.13rem;
+}
+
+.main::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+
+.main::-webkit-scrollbar-thumb {
+  background: #6649b8;
+}
+
+.allUserSection::-webkit-scrollbar {
+  width: 0.13rem;
+}
+
+.allUserSection::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+
+.allUserSection::-webkit-scrollbar-thumb {
+  background: #6649b8;
+}
+
+.activeUserList::-webkit-scrollbar {
+  width: 0.13rem;
+}
+
+.activeUserList::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+
+.allUserSection::-webkit-scrollbar-thumb {
+  background: #6649b8;
+}

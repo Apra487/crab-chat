@@ -24,17 +24,7 @@
   text-align: center;
 }
 
-.main::-webkit-scrollbar {
-  width: 0.25rem;
-}
 
-.main::-webkit-scrollbar-track {
-  background: #1e1e24;
-}
-
-.main::-webkit-scrollbar-thumb {
-  background: #6649b8;
-}
 form {
   height: 5vh;
   display: flex;
@@ -61,4 +51,5 @@ form button {
     width: 40px;
     background: none;
     cursor: pointer;
+    overflow-x: hidden;
 }
