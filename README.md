@@ -14,7 +14,7 @@ The front-end has been developed as a desktop prototype, and it is meant to be v
 ## Screenshots
 <img width="1792" alt="Screenshot 2021-12-22 at 10 05 17 PM" src="https://user-images.githubusercontent.com/54775196/147125341-e51912b8-fd36-4f9a-abf4-1a779ab386f5.png">
 
-<img width="1792" alt="Screenshot 2021-12-23 at 1 20 27 AM" src="https://user-images.githubusercontent.com/54775196/147147666-ef5e6d33-e483-47fa-b5da-b9c44f0e241c.png">
+<img width="1792" alt="Screenshot 2021-12-23 at 8 19 25 PM" src="https://user-images.githubusercontent.com/54775196/147256995-3a662db7-bc83-4e59-80a2-7348181f65e2.png">
 
 ## Development Setup
 - Clone the repository and run `npm install` to install the necessary dependencies.
