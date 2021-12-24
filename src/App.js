@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import usePageVisibility from 'use-page-visibility';
 import moment from 'moment';
 
-import firebase from 'firebase';
+import firebase, { messaging } from 'firebase';
 import { auth, realtimeDb } from './firebase';
 
 import db from './firebase';
@@ -164,7 +164,9 @@ function App() {
 				querySnapshot.forEach((doc) => {
 					const chatId = doc.id;
 					const msg = doc.data();
-					msgs.push(msg);
+					if (msg.createdAt) {
+						msgs.push(msg);
+					}
 					console.log(msg);
 					// update status to read
 					if (msg.to === user1 && msg.status !== 'read') {
@@ -259,9 +261,9 @@ function App() {
 				from: user1,
 				to: user2,
 				createdAt: firebase.firestore.FieldValue.serverTimestamp(),
-				status: activeUsers.some(checkUserId) ? 'delivered' : 'send',
+				status: (firebase.firestore.FieldValue.serverTimestamp()) ? (activeUsers.some(checkUserId) ? 'delivered' : 'send') : '',
 			});
-
+		
 		db.collection('users')
 			.doc(user2)
 			.collection('userChatRooms')
