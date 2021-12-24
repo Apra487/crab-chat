@@ -1,6 +1,6 @@
 # Crab Chat
 
-This repository contains the code of Crab Chat - A realtime peer to peer fullstack chat app with real time presence detection system.
+A realtime peer to peer fullstack chat app with real time presence detection system.
 
 ## Note
 
